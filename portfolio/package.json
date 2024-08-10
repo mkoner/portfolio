@@ -1,4 +1,6 @@
 {
+  
+  "proxy": "https://alaar9q8db.execute-api.us-east-1.amazonaws.com/v1/messages",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
