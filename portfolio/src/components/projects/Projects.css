@@ -1,0 +1,24 @@
+
+
+.project-card {
+    width: 100%; /* Makes the card span the full width of its container */
+    max-width: 500px; /* Sets a maximum width for larger screens */
+}
+
+.project-card p {
+    font-size: 0.875rem; /* Font size for the description */
+    margin-bottom: 1rem; /* Space below the description */
+    color: #666; /* Medium gray text color for the description */
+  }
+  
+  .project-card a {
+    font-size: 0.875rem; /* Font size for the link */
+    color: #007bff; /* Primary color for the link */
+    text-decoration: none; /* Removes underline from the link */
+    font-weight: bold; /* Makes the link text bold */
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+    color: #0056b3; /* Darker color for the link on hover */
+  }

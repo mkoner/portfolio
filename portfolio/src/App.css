@@ -1,38 +1,49 @@
-.App {
+
+.container-row {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Distributes space between items */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 1rem; /* Adds padding inside the container */
+  width: 100%; /* Makes the container span the full width */
+  max-width: 1200px; /* Sets a maximum width for larger screens */
+}
+
+/* Optional: Style for child elements within .container-row */
+.container-row > * {
+  margin: 0.5rem; /* Adds margin around child elements */
+}
+
+.container-column {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Aligns items to the start of the container (left by default) */
+  justify-content: flex-start; /* Aligns items to the start of the container (top by default) */
+  padding: 1rem; /* Adds padding inside the container */
+  gap: 1rem; /* Adds space between items */
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.card{
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h4 {
+  font-size: 1.25rem; /* Slightly larger font size for the project name */
+  margin-bottom: 0.5rem; /* Space below the project name */
+  color: #333; /* Dark text color */
 }

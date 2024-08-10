@@ -1,0 +1,26 @@
+.skill-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0.5rem; 
+    width: 150px;
+  }
+  
+  .skill-card h4 {
+    font-size: 1rem; /* Font size for the skill name */
+    margin-bottom: 0.5rem; /* Space below the skill name */
+    color: #333; /* Dark text color */
+  }
+  
+  .skill-card img {
+    width: 50px; /* Fixed width for the logo */
+    height: 50px; /* Fixed height for the logo */
+    object-fit: contain; /* Ensures the image fits within the given dimensions */
+    margin-bottom: 0.5rem; /* Space below the logo */
+  }
+  
+  /* Optional: Add hover effect */
+  .skill-card:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    border-color: #ccc; /* Darker border color on hover */
+  }
+  
