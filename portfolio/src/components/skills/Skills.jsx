@@ -16,7 +16,7 @@ const SkillCard = ({skill})=>{
 
 const Skills = () => {
     return (
-        <div className="skills-container container-column">
+        <div className="skills-container container-column" id='skills'>
             <h2>Skills</h2>
             <div className="skills container-row">
                 {skills.map((skill, index) => (

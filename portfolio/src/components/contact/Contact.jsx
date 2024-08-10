@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Contact.css'; 
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -8,8 +10,7 @@ const Contact = () => {
     const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        
+        e.preventDefault(); 
         const formData = {
             name: name,
             email: email,
@@ -25,18 +26,16 @@ const Contact = () => {
                 },
                 body: JSON.stringify(formData),
             });
-    
             if (response.ok) {
                 const result = await response.json();
-                console.log('Success:', result);
-                // Handle success (e.g., show a success message, clear the form, etc.)
+                toast.success(`Thanks ${name} 😊, I will get back to you soon if needed`)
             } else {
                 console.error('Error:', response.statusText);
-                // Handle error (e.g., show an error message)
+                toast.error('Oops ... SOmething went wrong!')  
             }
         } catch (error) {
-            console.error('Request failed:', error);
-            // Handle request failure (e.g., show a network error message)
+            console.error('Hereee Request failed:', error);
+            toast.error('Oops ... SOmething went wrong!')
         } finally{
             setEmail("");
             setMessage("");
@@ -46,29 +45,29 @@ const Contact = () => {
     
 
     return (
-        <div className="contact container-row">
+        <div className="contact container-row" id='contact'>
             <form onSubmit={handleSubmit} className='container-column'>
-                <div>
-                    <label>Name:</label>
+                <div className='form-element'>
                     <input 
+                        placeholder='Name'
                         type="text" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)} 
                         required 
                     />
                 </div>
-                <div>
-                    <label>Email:</label>
+                <div className='form-element'>
                     <input 
+                        placeholder='Email'
                         type="email" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
                     />
                 </div>
-                <div>
-                    <label>Message:</label>
+                <div className='form-element'>
                     <textarea 
+                        placeholder='Your message'
                         value={message} 
                         onChange={(e) => setMessage(e.target.value)} 
                         required 
@@ -95,6 +94,7 @@ const Contact = () => {
                     </a>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };

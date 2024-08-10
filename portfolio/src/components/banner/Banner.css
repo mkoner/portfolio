@@ -1,0 +1,77 @@
+/* Container for the entire banner */
+.banner {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+/* Container for the image */
+.image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Style for the profile image */
+.image-container img {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+}
+
+/* Container for the about section */
+.about-section {
+    flex: 1; 
+}
+
+/* Style for headings and text in the about section */
+.about-section h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about-section span {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Container for soft skills section */
+.soft-skills {
+    margin-top: 20px;
+}
+
+/* Style for the soft skills heading */
+.soft-skills p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444; /* Slightly darker text color */
+}
+
+
+/* Style for individual soft skill cards */
+.soft-skill {
+    padding: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 120px;
+}
+
+/* Style for the soft skill icon */
+.soft-skill-icon {
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+/* Style for the soft skill name */
+.soft-skill-name {
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}

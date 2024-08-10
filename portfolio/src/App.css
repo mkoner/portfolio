@@ -10,7 +10,6 @@ body{
   align-items: center; /* Aligns items vertically in the center */
   justify-content: center; /* Distributes space between items */
   padding: 1rem; /* Adds padding inside the container */
-  width: 100%; /* Makes the container span the full width */
   box-sizing: border-box;
   gap: 1rem;
 }

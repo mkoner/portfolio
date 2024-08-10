@@ -29,7 +29,7 @@ const About = () => {
             <h2>Mamadou Koné</h2>
             <span>Software Engineer</span>
             <div className="soft-skills container-column">
-                <p>What I bring to the table</p>
+                <p>Key Strengths</p>
                 <div className="skills container-row">
                     {softSkills.map((skill, index) => (
                         <SoftSkillCard skill={skill} key={index} />
@@ -42,7 +42,7 @@ const About = () => {
 
 const Banner = () => {
     return (
-        <div className="banner container-row">
+        <div className="banner container-row" id='about'>
             <Image />
             <About />
         </div>
