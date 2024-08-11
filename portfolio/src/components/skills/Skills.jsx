@@ -5,25 +5,25 @@ import skills from '../../data/skills';
 
 const SkillCard = ({skill})=>{
     return (
-        <div className="skill-card card">
+        <article className="skill-card card">
             <h4> {skill.name} </h4>
             <div>
                 <img src={skill.logo} alt={skill.name} />
             </div>
-        </div>
+        </article>
     );
 }
 
 const Skills = () => {
     return (
-        <div className="skills-container container-column" id='skills'>
-            <h2>Skills</h2>
-            <div className="skills container-row">
+        <main className="skills-container container-column" id='skills'>
+            <h2 className='lightGreenColor'>Skills</h2>
+            <section className="skills container-row">
                 {skills.map((skill, index) => (
                     <SkillCard skill={skill}  key={index}/>
                 ))}
-            </div>
-        </div>
+            </section>
+        </main>
     );
 };
 

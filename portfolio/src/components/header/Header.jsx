@@ -1,12 +1,13 @@
 import React from 'react';
 import './Header.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import logo from '../../logo.png'
 
 const Header = () => {
     return (
-        <header className="header container-row">
+        <header className="header container-row darkGreenBg">
             <div className="logo">
-                <h1>Mamadou Koné</h1>
+                <img src={logo} alt="logo" height={30}/>
             </div>
             <div className="nav-social container-row">
             <nav className="nav-links container-row">
@@ -15,11 +16,12 @@ const Header = () => {
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <div className="social-icons container-row">
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <div className="social-links container-row">
+                <a href="https://www.linkedin.com/in/mamadou-kone-3b1694b9/" 
+                target="_blank" rel="noopener noreferrer" className='paleYellowColor'>
                     <FaLinkedin />
                 </a>
-                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/mkoner" target="_blank" rel="noopener noreferrer" className='paleYellowColor'>
                     <FaGithub />
                 </a>
             </div>

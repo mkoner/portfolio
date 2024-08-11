@@ -1,5 +1,4 @@
 .contact {
-    background-color: #f0f0f0; /* Light background color */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 100%;
@@ -18,8 +17,8 @@ form {
 form input, form textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: none;
+
     font-size: 1rem;
     box-sizing: border-box;
 }
@@ -28,7 +27,6 @@ form input, form textarea {
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover {
-    border-color: #888; /* Darker border on hover */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
 
@@ -36,9 +34,9 @@ textarea:hover {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #333; /* Even darker border on focus */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on focus */
-    outline: none; /* Remove the default outline */
+    border: 1px solid var(--vibrantOrange) ;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    outline: none;
 }
 
 form textarea {
@@ -50,7 +48,6 @@ form button {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
-    background-color: #007bff; /* Primary button color */
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -58,36 +55,21 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3; 
+    background-color: var(--lightGreen); 
 }
 
-.social-links {
+.info {
     flex: 1;
 }
 
-.social-links h4 {
+.info h4 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #333;
 }
 
-.social-links p {
+.info p {
     margin: 0.5rem 0;
     color: #555;
     font-size: 1rem;
 }
 
-.links {
-    display: flex;
-    gap: 1rem; /* Space between icons */
-    margin-top: 1rem;
-}
-
-.links a {
-    color: #007bff; /* Icon color */
-    transition: color 0.3s ease;
-}
-
-.links a:hover {
-    color: #0056b3; /* Darker color on hover */
-}

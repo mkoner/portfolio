@@ -12,8 +12,7 @@
   }
   
   .project-card a {
-    font-size: 0.875rem; /* Font size for the link */
-    color: #007bff; /* Primary color for the link */
+    font-size: 0.75rem; /* Font size for the link */
     text-decoration: none; /* Removes underline from the link */
     font-weight: bold; /* Makes the link text bold */
   }

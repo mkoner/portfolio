@@ -27,14 +27,11 @@ const Contact = () => {
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
-                const result = await response.json();
                 toast.success(`Thanks ${name} 😊, I will get back to you soon if needed`)
             } else {
-                console.error('Error:', response.statusText);
                 toast.error('Oops ... SOmething went wrong!')  
             }
         } catch (error) {
-            console.error('Hereee Request failed:', error);
             toast.error('Oops ... SOmething went wrong!')
         } finally{
             setEmail("");
@@ -45,7 +42,7 @@ const Contact = () => {
     
 
     return (
-        <div className="contact container-row" id='contact'>
+        <div className="contact container-row paleYellowBg" id='contact'>
             <form onSubmit={handleSubmit} className='container-column'>
                 <div className='form-element'>
                     <input 
@@ -73,23 +70,25 @@ const Contact = () => {
                         required 
                     />
                 </div>
-                <button type="submit">Send Message</button>
+                <button type="submit" className='vibrantOrangeBg'>Send Message</button>
             </form>
             
             {/* Social Links Section */}
-            <div className="social-links container-column">
-                <h4>Mkoner</h4>
+            <div className="info container-column">
+                <h4 className='lightGreenColor'>Mkoner</h4>
                 <p>
                     Full stack Software Engineer
                 </p>
                 <p>
                     m-koner@outlook.com
                 </p>
-                <div className="links container-row">
-                    <a href="https://www.linkedin.com/in/mamadou-kone-3b1694b9/" target="_blank" rel="noopener noreferrer">
+                <div className="social-links container-row">
+                    <a href="https://www.linkedin.com/in/mamadou-kone-3b1694b9/" 
+                        target="_blank" rel="noopener noreferrer" className='vibrantOrangeColor'>
                         <FaLinkedin size={30} />
                     </a>
-                    <a href="https://github.com/mkoner" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/mkoner" target="_blank" rel="noopener noreferrer"
+                        className='vibrantOrangeColor'>
                         <FaGithub size={30} />
                     </a>
                 </div>

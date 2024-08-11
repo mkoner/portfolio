@@ -5,11 +5,11 @@ import projects from '../../data/projects';
 
 const ProjectCard = ({project}) => {
     return (
-        <div className="project-card card">
-                <h4> {project.name} </h4>
+        <article className="project-card card">
+                <h4 className='lightGreenColor'> {project.name} </h4>
                 <p> {project.description} </p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">View on GitHub</a>
-        </div>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className='lightGreenColor'>View on GitHub</a>
+        </article>
     );
 }
 
@@ -17,14 +17,14 @@ const ProjectCard = ({project}) => {
 
 const Projects = () => {
     return (
-        <div className="projects-container container-column" id='projects'>
-            <h2>Projects</h2>
-            <div className="projects container-row">
+        <main className="projects-container container-column" id='projects'>
+            <h2 className='darkGreenColor'>Projects</h2>
+            <section className="projects container-row">
             {projects.map((project, index) => (
                     <ProjectCard project={project} key={index}/>
                 ))}
-            </div>
-        </div>
+            </section>
+        </main>
     );
 };
 

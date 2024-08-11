@@ -1,0 +1,2 @@
+const summary = "Skilled in designing, developing, testing, deploying, and maintaining RESTful web services, as well as creating dynamic and responsive user interfaces to deliver seamless and efficient software solutions."
+export default summary;
